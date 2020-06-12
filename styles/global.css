@@ -20,11 +20,20 @@ body {
     background: white;
     color: #15202b;
   }
+
+  ::selection {
+    background-color: #0af5f4;
+    color: white;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   body {
     background: #15202b;
     color: white;
+  }
+  ::selection {
+    background-color: #0af5f4;
+    color: black;
   }
 }

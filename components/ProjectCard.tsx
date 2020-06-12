@@ -13,11 +13,11 @@ const ProjectCard: React.FC<Props> = ({
   imagePath,
 }) => {
   return (
-    <div className="cursor-pointer">
+    <div className="cursor-pointer w-full">
       <Image path={imagePath} />
 
       <div className="pt-4">
-        <p className="text-3xl font-bold">{title}</p>
+        <p className="text-3xl font-bold hover:underline">{title}</p>
         <div>
           <p className="text-lg">{description}</p>
         </div>

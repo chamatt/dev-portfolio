@@ -19,16 +19,17 @@ const Image: React.FC<Props> = ({
 
   return (
     <div
-      className="w-full hover:shadow-lg"
+      className="w-full hover:shadow-lg relative"
       style={{
-        backgroundImage: `url(${require(`../assets/${path}?lqip`)})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        ...(isLoading ? { width: "100%", paddingBottom: "100%" } : {}),
+        paddingTop: "100%",
+        background: `radial-gradient(#bbb9, #eee9)`,
+        // ...(isLoading ? { width: "100%", paddingBottom: "100%" } : {}),
       }}
       {...containerProps}
     >
-      {!isLoading && <img src={src} {...imgProps} />}
+      {!isLoading && (
+        <img className="absolute top-0 left-0" src={src} {...imgProps} />
+      )}
     </div>
   );
 };

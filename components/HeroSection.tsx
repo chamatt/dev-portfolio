@@ -20,11 +20,16 @@ const HeroSection: React.FC = () => {
 
         <div className="w-full sm:w-1/2">
           <div className="flex flex-col-reverse sm:flex-col mt-8">
-            <p className="text-gray-700 text-2xl sm:text-3xl uppercase tracking-wider mb-4">
+            <p className="text-gray-700 dark:text-gray-500 text-2xl sm:text-3xl uppercase tracking-wider mb-4">
               Matheus Vicente
             </p>
             <h2 className="font-bold text-5xl sm:text-6xl mb-4 leading-none">
-              <span style={{ backgroundColor: "#0af5f4" }}>Fullstack</span>{" "}
+              <span
+                className="dark:text-black"
+                style={{ backgroundColor: "#0af5f4" }}
+              >
+                Fullstack
+              </span>{" "}
               Developer
             </h2>
           </div>
@@ -34,13 +39,13 @@ const HeroSection: React.FC = () => {
             next?
           </p>
           <div className="flex flex-wrap mt-8 items-center sm:items-start sm:flex-col lg:flex-row">
-            <div className="w-1/2 pr-1 sm:mb-4 sm:w-64 lg:mr-2">
+            <div className="w-1/2 pr-1 sm:pr-0 xl:pr-1  sm:mb-4 sm:w-64 lg:mr-2">
               <Button size="big" className="w-full" variant="primary">
                 <span className="hidden sm:block">MY PROJECTS</span>
                 <span className="sm:hidden">PROJECTS</span>
               </Button>
             </div>
-            <div className="w-1/2 pl-1 sm:mb-4 sm:w-64 lg:mr-2">
+            <div className="w-1/2 pl-1 sm:pl-0 xl:pl-1 sm:mb-4 sm:w-64 lg:mr-2">
               <Button size="big" className="w-full" variant="secondary">
                 <span className="hidden sm:flex justify-end">HIRE ME</span>
                 <span className="sm:hidden">HIRE</span>
@@ -50,7 +55,7 @@ const HeroSection: React.FC = () => {
         </div>
         <div className="w-full sm:w-1/2">
           <div className="hidden sm:flex lg:hidden justify-end lg:max-h-600">
-            <img src={require("../assets/peep-standing-full.png")}></img>
+            <img src={require("../assets/peep-standing-svg.svg")}></img>
           </div>
           <div className="hidden lg:flex justify-end lg:max-h-70-screen">
             <img
