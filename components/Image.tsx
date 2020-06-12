@@ -1,7 +1,6 @@
 import React from "react";
 
 import { useImage } from "react-image";
-// import { Container } from './styles';
 
 interface Props {
   path: string;
@@ -13,16 +12,10 @@ const Image: React.FC<Props> = ({
   containerProps = {},
   imgProps = {},
 }) => {
-  //   console.log(" aaaaaaaaaaaaaaaa");
   const { src, isLoading } = useImage({
     srcList: [require(`../assets/${path}`)],
     useSuspense: false,
   });
-  //   return (
-  //     <div>
-  //       <img src={require(`../assets/${path}`)} />
-  //     </div>
-  //   );
 
   return (
     <div

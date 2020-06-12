@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import Image from "./Image";
 
 interface Props {
