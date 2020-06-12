@@ -1,5 +1,7 @@
+const purgeCSS = require("@fullhuman/postcss-purgecss");
+
 module.exports = {
-  purge: [],
+  purge: ["./components/**/*.tsx", "./pages/**/*.tsx", "./assets/**/*.tsx"],
   theme: {
     fontFamily: {
       sans:
@@ -22,6 +24,7 @@ module.exports = {
       grayscale: "grayscale(1)",
       invert: "invert(1)",
       sepia: "sepia(1)",
+      blur: "blur(25px)",
     },
     backdropFilter: {
       // defaults to {}

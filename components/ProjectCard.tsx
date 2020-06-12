@@ -1,23 +1,22 @@
-import React from "react";
+import React, { useState, useRef } from "react";
+
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import Image from "./Image";
 
 interface Props {
-  image: string;
+  imagePath: string;
   title: string;
   description: string;
 }
 const ProjectCard: React.FC<Props> = ({
   title = "",
   description = "",
-  image,
+  imagePath,
 }) => {
   return (
     <div className="cursor-pointer">
-      <div className="w-full hover:shadow-lg">
-        <img
-          src={image}
-          className="object-cover w-full h-full position-center"
-        ></img>
-      </div>
+      <Image path={imagePath} />
+
       <div className="pt-4">
         <p className="text-3xl font-bold">{title}</p>
         <div>
