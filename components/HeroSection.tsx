@@ -2,6 +2,8 @@ import React from "react";
 import { Button } from "./Button";
 import Navbar from "./Navbar";
 import Container from "./Container";
+import { BsMoon, BsSun } from "react-icons/bs";
+import { useDarkMode } from "../hooks/useDarkMode";
 
 // import { Container } from './styles';
 

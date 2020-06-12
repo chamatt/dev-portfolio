@@ -17,6 +17,7 @@
     "postcss-preset-env": "^6.7.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-icons": "^3.10.0",
     "react-image": "^4.0.1",
     "responsive-loader": "^1.2.0",
     "svg-sprite-loader": "^5.0.0",
