@@ -24,7 +24,8 @@ const HeroSection: React.FC = () => {
               Matheus Vicente
             </p>
             <h2 className="font-bold text-5xl sm:text-6xl mb-4 leading-none">
-              Fullstack Developer
+              <span style={{ backgroundColor: "#0af5f4" }}>Fullstack</span>{" "}
+              Developer
             </h2>
           </div>
           <p className="pr-4 text-lg w-10/12">
