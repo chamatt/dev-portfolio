@@ -9,3 +9,22 @@
 body {
   @apply font-sans;
 }
+
+body {
+  background: white;
+  color: #15202b;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: white;
+    color: #15202b;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #15202b;
+    color: white;
+  }
+}
