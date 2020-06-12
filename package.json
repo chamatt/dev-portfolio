@@ -8,8 +8,21 @@
     "start": "next start"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "next": "9.4.4",
+    "next-compose-plugins": "^2.2.0",
+    "next-optimized-images": "^2.6.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "responsive-loader": "^1.2.0",
+    "sharp": "^0.25.3"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.2.0",
+    "@types/node": "^14.0.13",
+    "@types/react": "^16.9.36",
+    "autoprefixer": "^9.8.0",
+    "tailwindcss": "^1.4.6",
+    "typescript": "^3.9.5"
   }
 }
