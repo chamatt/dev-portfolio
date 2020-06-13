@@ -33,6 +33,9 @@ module.exports = {
     },
 
     extend: {
+      colors: {
+        darkgray: "#2f333f",
+      },
       spacing: {
         "1/12": "calc(1 * 100% / 12)",
         "2/12": "calc(2 * 100% / 12)",

@@ -18,7 +18,7 @@ body {
 @media (prefers-color-scheme: light) {
   body {
     background: white;
-    color: #15202b;
+    color: #2f333f;
   }
 
   ::selection {

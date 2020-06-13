@@ -11,14 +11,14 @@ interface Props {
 
 const ProjectsSection: React.FC<Props> = ({ title, subtitle }) => {
   return (
-    <div className="bg-gray-0 py-10 sm:py-20 bg-accent">
+    <div className="bg-gray-0 py-10 sm:py-20">
       <Container as="section">
         <SectionTitle title={title} subtitle={subtitle}></SectionTitle>
         <div className="py-10 sm:py-20">
-          <div className="flex flex-col sm:flex-row overflow-hidden">
+          <div className="flex flex-col sm:flex-row ">
             <ProjectCard
               imagePath="project-resources.jpg"
-              title="Finance App"
+              title="NativeGram"
               description="Keep track of your spending and start budgeting"
             />
             <div className="w-8 mb-8" />

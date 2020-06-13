@@ -11,13 +11,10 @@ interface Props {
 
 const BlogSection: React.FC<Props> = ({ title, subtitle }) => {
   return (
-    <div className="bg-gray-0 py-10 sm:py-20">
+    <div className="bg-gray-0 py-10 sm:py-20 bg-accent">
       <Container as="section">
         <div className="flex flex-row justify-between">
           <SectionTitle title={title} subtitle={subtitle}></SectionTitle>
-          {/* <Button size="small" variant="secondary" className="h-16 px-8">
-            Read more
-          </Button> */}
         </div>
         <div className="py-20">
           <div className="grid grid-cols-2 gap-4">
