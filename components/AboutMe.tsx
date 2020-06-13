@@ -156,7 +156,7 @@ const AboutMe: React.FC = () => {
                 <FaBook />
                 <span className="pl-2 text-sm ">Resumé</span>
               </a>
-              <Button className="w-full" size="small">
+              <Button variant="primary" className="w-full mt-1" size="small">
                 Contact me
               </Button>
             </div>
