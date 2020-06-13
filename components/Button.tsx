@@ -23,7 +23,7 @@ export const Button: React.FC<ButtonProps> = ({
             variant === "secondary",
           "xs:text-lg md:text-xl lg:text-2xl": size === "big",
           "xs:text-md md:text-lg lg:text-xl": size === "normal",
-          "xs:text-sm md:text-md lg:text-lg": size === "small",
+          "text-sm sm:text-md lg:text-lg": size === "small",
           [className]: className,
         }
       )}

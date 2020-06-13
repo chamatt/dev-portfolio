@@ -1,13 +1,19 @@
 import React from "react";
+import classNames from "classnames";
 
 interface Props {
   title: string;
   subtitle: string;
+  className?: string;
 }
 
-const SectionTitle: React.FC<Props> = ({ title, subtitle }) => {
+const SectionTitle: React.FC<Props> = ({ title, subtitle, className }) => {
   return (
-    <div className="flex flex-col">
+    <div
+      className={classNames("flex flex-col", {
+        [className]: className,
+      })}
+    >
       <h2 className="text-2xl sm:text-3xl uppercase tracking-wider mb-0 leading-none">
         {title}
       </h2>

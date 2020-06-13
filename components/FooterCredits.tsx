@@ -4,7 +4,7 @@ import React from "react";
 
 const FooterCredits: React.FC = () => {
   return (
-    <div className="w-full text-gray-700 text-lg text-center py-4">
+    <div className="w-full text-gray-700 text-lg text-center py-4 bg-accent">
       <p>
         Made with
         <img
