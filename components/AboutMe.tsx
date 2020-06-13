@@ -82,7 +82,7 @@ interface TechStackProps {
 const TechStack: React.FC<TechStackProps> = ({ title, stack }) => {
   return (
     <div className="py-2 w-full">
-      <h3 className="text-md text-darkgray pb-4 uppercase font-bold">
+      <h3 className="text-md text-darkgray dark:text-white pb-4 uppercase font-bold">
         {title}
       </h3>
       <div className="flex flex-row flex-wrap justify-start">
@@ -94,7 +94,7 @@ const TechStack: React.FC<TechStackProps> = ({ title, stack }) => {
           return (
             <div
               key={name}
-              className="flex flex-col items-center w-20 hover:text-indigo-500 text-gray-600 py-2"
+              className="flex flex-col items-center w-20 hover:text-indigo-500 text-gray-600 dark:text-gray-400 py-2"
             >
               <Icon />
               <p className="text-xs pt-2">{name}</p>
@@ -112,7 +112,7 @@ const AboutMe: React.FC = () => {
       <Container as="section">
         <div className="grid grid-cols-12 grid-flow-row">
           <div className="col-span-12 sm:col-span-4 lg:col-span-3 w-full">
-            <div className="w-full bg-white shadow-lg p-10 sm:p-4 lg:p-10">
+            <div className="w-full bg-default shadow-lg p-10 sm:p-4 lg:p-10">
               <div className="flex justify-center mb-6 w-full">
                 <img
                   className="object-contain w-full"
@@ -125,7 +125,7 @@ const AboutMe: React.FC = () => {
               <p className="py-2">Comp. Eng. Student at UFES</p>
               <p>Fullstack Developer</p>
               <div className=" flex items-center justify-between flex-wrap">
-                <div className="text-md text-gray-700 flex items-center py-2 ">
+                <div className="text-md text-gray-700 dark:text-gray-400 flex items-center py-2 ">
                   <span className="mr-2">
                     <FaLocationArrow />
                   </span>
