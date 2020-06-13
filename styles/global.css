@@ -25,6 +25,14 @@ body {
     background-color: #0af5f4;
     color: white;
   }
+
+  .bg-default {
+    background: white;
+  }
+
+  .bg-accent {
+    background: #f9fcfc;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -35,5 +43,13 @@ body {
   ::selection {
     background-color: #0af5f4;
     color: black;
+  }
+
+  .bg-default {
+    background: #15202b;
+  }
+
+  .bg-accent {
+    background: #243447;
   }
 }

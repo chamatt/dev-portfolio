@@ -11,10 +11,7 @@ interface Props {
 
 const ProjectsSection: React.FC<Props> = ({ title, subtitle }) => {
   return (
-    <div
-      className="bg-gray-0 py-10 sm:py-20"
-      style={{ background: "#f9fcfc;" }}
-    >
+    <div className="bg-gray-0 py-10 sm:py-20 bg-accent">
       <Container as="section">
         <SectionTitle title={title} subtitle={subtitle}></SectionTitle>
         <div className="py-10 sm:py-20">
