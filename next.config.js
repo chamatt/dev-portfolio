@@ -1,8 +1,21 @@
 const withPlugins = require("next-compose-plugins");
 const optimizedImages = require("next-optimized-images");
 
-module.exports = withPlugins([
-  [optimizedImages, {}],
+const nextConfig = {
+  webpack: (config, options) => {
+    config.module.rules.push({
+      test: /\.md$/,
+      loader: "frontmatter-markdown-loader",
+      options: { mode: ["react-component"] },
+    });
+    return config;
+  },
+};
 
-  // your other plugins here
-]);
+module.exports = withPlugins(
+  [
+    [optimizedImages, {}],
+    // your other plugins here
+  ],
+  nextConfig
+);
