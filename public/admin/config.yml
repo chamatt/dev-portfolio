@@ -21,7 +21,7 @@ collections:
     files:
       - label: "Hero Section"
         name: "hero"
-        file: "content/landing/hero.md"
+        file: "content/landing/hero.yml"
         fields:
           - { label: Name, name: name, widget: string }
           - { label: JobTitle, name: job_title, widget: string }
