@@ -4,7 +4,10 @@ import Navbar from "./Navbar";
 import Container from "./Container";
 import { BsMoon, BsSun } from "react-icons/bs";
 import { useDarkMode } from "../hooks/useDarkMode";
-
+import MovingBall from "./MovingBall";
+import scrollblack from "../assets/scroll-black.json";
+import scrollwhite from "../assets/scroll-white.json";
+import Lottie from "react-lottie";
 // import { Container } from './styles';
 
 const HeroSection: React.FC = () => {
@@ -12,7 +15,7 @@ const HeroSection: React.FC = () => {
     <Container as="section" className="min-h-screen sm:min-h-0">
       <Navbar />
       <div className="flex flex-col sm:flex-row">
-        <div className="sm:hidden h-64 mx-auto mt-8">
+        <div className="sm:hidden h-64 mx-auto mt-8 relative">
           <img
             className="object-fit h-full"
             src={require("../assets/peep-standing-half.png")}
@@ -59,7 +62,7 @@ const HeroSection: React.FC = () => {
           <div className="hidden sm:flex lg:hidden justify-end lg:max-h-600">
             <img src={require("../assets/peep-standing-svg.svg")}></img>
           </div>
-          <div className="hidden lg:flex justify-end lg:max-h-70-screen">
+          <div className="hidden lg:flex justify-end lg:max-h-70-screen relative">
             <img
               className="object-contain"
               src={require("../assets/peep-standing-half.png")}
@@ -67,11 +70,39 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="w-full mt-8 mb-4">
-        <img
+      <div className="w-full mt-8 pb-4">
+        {/* <img
           className="mx-auto dark:filter-invert"
           src={require("../assets/mouse-scrolling.png?resize&size=40").src}
-        ></img>
+        ></img> */}
+        <div className="dark:hidden">
+          <Lottie
+            options={{
+              loop: true,
+              autoplay: true,
+              animationData: scrollblack,
+              rendererSettings: {
+                preserveAspectRatio: "xMidYMid meet",
+              },
+            }}
+            height={30}
+            width={30}
+          />
+        </div>
+        <div className="hidden dark:block">
+          <Lottie
+            options={{
+              loop: true,
+              autoplay: true,
+              animationData: scrollwhite,
+              rendererSettings: {
+                preserveAspectRatio: "xMidYMid meet",
+              },
+            }}
+            height={30}
+            width={30}
+          />
+        </div>
       </div>
     </Container>
   );
