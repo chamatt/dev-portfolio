@@ -10,7 +10,26 @@ import scrollwhite from "../assets/scroll-white.json";
 import Lottie from "react-lottie";
 // import { Container } from './styles';
 
+import attributes from "../content/landing/hero.yml";
+
 const HeroSection: React.FC = () => {
+  console.log(attributes);
+
+  const getJobTitleStyled = (title) => {
+    const splitted = title.split(" ");
+    const splitIndex = Math.floor(splitted.length / 2);
+    return (
+      <>
+        <span
+          className="dark:text-black"
+          style={{ backgroundColor: "#0af5f4" }}
+        >
+          {splitted.slice(0, splitIndex).join(" ")}
+        </span>{" "}
+        {splitted.slice(splitIndex).join(" ")}
+      </>
+    );
+  };
   return (
     <Container as="section" className="min-h-screen sm:min-h-0">
       <Navbar />
@@ -26,34 +45,28 @@ const HeroSection: React.FC = () => {
         <div className="w-full sm:w-1/2">
           <div className="flex flex-col-reverse sm:flex-col mt-8">
             <p className="text-gray-700 dark:text-gray-500 text-2xl sm:text-3xl uppercase tracking-wider mb-4">
-              Matheus Vicente
+              {attributes.name}
             </p>
             <h2 className="font-bold text-5xl sm:text-6xl mb-4 leading-none">
-              <span
-                className="dark:text-black"
-                style={{ backgroundColor: "#0af5f4" }}
-              >
-                Fullstack
-              </span>{" "}
-              Developer
+              {getJobTitleStyled(attributes.job_title)}
             </h2>
           </div>
-          <p className="pr-4 text-lg w-10/12">
-            Over the past two years, I’ve been working with clients from all
-            over the world to bring their ideas into reality. Will yours be
-            next?
-          </p>
+          <p className="pr-4 text-lg w-10/12">{attributes.intro}</p>
           <div className="flex flex-wrap mt-8 items-center sm:items-start sm:flex-col lg:flex-row">
             <div className="w-1/2 pr-1 sm:pr-0 xl:pr-1  sm:mb-4 sm:w-64 lg:mr-2">
               <Button size="big" className="w-full" variant="primary">
-                <span className="hidden sm:block">MY PROJECTS</span>
-                <span className="sm:hidden">PROJECTS</span>
+                <span className="hidden sm:block">
+                  {attributes.primary_button}
+                </span>
+                <span className="sm:hidden">{attributes.primary_button}</span>
               </Button>
             </div>
             <div className="w-1/2 pl-1 sm:pl-0 xl:pl-1 sm:mb-4 sm:w-64 lg:mr-2">
               <Button size="big" className="w-full" variant="secondary">
-                <span className="hidden sm:flex justify-end">HIRE ME</span>
-                <span className="sm:hidden">HIRE</span>
+                <span className="hidden sm:flex justify-end">
+                  {attributes.secondary_button}
+                </span>
+                <span className="sm:hidden">{attributes.secondary_button}</span>
               </Button>
             </div>
           </div>

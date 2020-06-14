@@ -4,11 +4,18 @@ const optimizedImages = require("next-optimized-images");
 const nextConfig = {
   distDir: "build",
   webpack: (config, options) => {
-    config.module.rules.push({
-      test: /\.md$/,
-      loader: "frontmatter-markdown-loader",
-      options: { mode: ["react-component"] },
-    });
+    config.module.rules.push(
+      {
+        test: /\.md$/,
+        loader: "frontmatter-markdown-loader",
+        options: { mode: ["react-component"] },
+      },
+      {
+        test: /\.ya?ml$/,
+        type: "json", // Required by Webpack v4
+        use: "yaml-loader",
+      }
+    );
     return config;
   },
 };

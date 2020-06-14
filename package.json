@@ -15,6 +15,7 @@
     "classnames": "^2.2.6",
     "imagemin-svgo": "^8.0.0",
     "jimp": "^0.13.0",
+    "js-yaml-loader": "^1.2.2",
     "next": "9.4.4",
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.6.1",
@@ -37,6 +38,7 @@
     "autoprefixer": "^9.8.0",
     "frontmatter-markdown-loader": "^3.5.0",
     "tailwindcss": "^1.4.6",
-    "typescript": "^3.9.5"
+    "typescript": "^3.9.5",
+    "yaml-loader": "^0.6.0"
   }
 }
