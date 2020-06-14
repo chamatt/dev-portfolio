@@ -16,3 +16,15 @@ collections:
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
       - { label: "Author", name: "author", widget: "string", default: "Admin" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - label: "Home"
+    name: "home"
+    files:
+      - label: "Hero Section"
+        name: "hero"
+        file: "content/landing/hero.md"
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: JobTitle, name: job_title, widget: string }
+          - { label: Intro, name: intro, widget: string }
+          - { label: PrimaryButton, name: primary_button, widget: string }
+          - { label: SecondaryButton, name: secondary_button, widget: string }
