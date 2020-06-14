@@ -3,9 +3,9 @@ import React, { ReactElement, ReactType } from "react";
 import {
   FaGithub,
   FaLinkedinIn,
-  FaGoogle,
   FaLocationArrow,
   FaBook,
+  FaEnvelope,
 } from "react-icons/fa";
 import { DiHaskell } from "react-icons/di";
 import { GrGraphQl, GrGatsbyjs } from "react-icons/gr";
@@ -15,7 +15,8 @@ import classNames from "classnames";
 import SectionTitle from "./SectionTitle";
 import Container from "./Container";
 import { Button } from "./Button";
-// npm install --save-dev @iconify/react @iconify/icons-logos
+import attributes from "../content/landing/profile.yml";
+
 function nextjsIcon(props) {
   return (
     <svg
@@ -107,6 +108,7 @@ const TechStack: React.FC<TechStackProps> = ({ title, stack }) => {
 };
 
 const AboutMe: React.FC = () => {
+  console.log(attributes);
   return (
     <div className="bg-accent py-10 sm:py-20">
       <Container as="section">
@@ -116,20 +118,19 @@ const AboutMe: React.FC = () => {
               <div className="flex justify-center mb-6 w-full">
                 <img
                   className="object-contain w-full"
-                  src={require("../assets/profile.jpg?resize&size=300")}
+                  src={attributes.profile_picture}
                 />
               </div>
               <h2 className="font-bold text-2xl sm:text-3xl leading-tight">
-                Matheus Vicente
+                {attributes.name}
               </h2>
-              <p className="py-2">Comp. Eng. Student at UFES</p>
-              <p>Fullstack Developer</p>
+              <p className="py-2">{attributes.description}</p>
               <div className=" flex items-center justify-between flex-wrap">
                 <div className="text-md text-gray-700 dark:text-gray-400 flex items-center py-2 ">
                   <span className="mr-2">
                     <FaLocationArrow />
                   </span>
-                  <span>Vitória - Brazil</span>
+                  <span>{attributes.location}</span>
                 </div>
                 <div className="flex items-center py-2">
                   {SocialIcons.map(({ icon, color, link }, index) => (
@@ -186,13 +187,13 @@ const AboutMe: React.FC = () => {
 };
 
 const SocialIcons = [
-  { icon: FaGithub, color: "#333", link: "https://github.com/chamatt" },
+  { icon: FaGithub, color: "#333", link: attributes.github },
   {
     icon: FaLinkedinIn,
     color: "#0e76a8",
     link: "https://www.linkedin.com/in/matheus-vicente-d-190001b2/",
   },
-  { icon: FaGoogle, color: "#ea4335", link: "mailto:matheus@chamatt.dev" },
+  { icon: FaEnvelope, color: "#ea4335", link: `mailto:${attributes.email}` },
 ];
 
 interface SocialButtonProps {

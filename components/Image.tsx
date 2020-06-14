@@ -1,6 +1,7 @@
 import React from "react";
 
 import { useImage } from "react-image";
+import { GetStaticProps } from "next";
 
 interface Props {
   path: string;

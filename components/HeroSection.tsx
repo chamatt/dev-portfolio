@@ -13,8 +13,6 @@ import Lottie from "react-lottie";
 import attributes from "../content/landing/hero.yml";
 
 const HeroSection: React.FC = () => {
-  console.log(attributes);
-
   const getJobTitleStyled = (title) => {
     const splitted = title.split(" ");
     const splitIndex = Math.floor(splitted.length / 2);
