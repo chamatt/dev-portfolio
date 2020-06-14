@@ -13,7 +13,7 @@ const Image: React.FC<Props> = ({
   containerProps = {},
   imgProps = {},
 }) => {
-  const { src, isLoading } = useImage({
+  const { src } = useImage({
     srcList: [require(`../assets/${path}`)],
     useSuspense: false,
   });
@@ -24,13 +24,14 @@ const Image: React.FC<Props> = ({
       style={{
         paddingTop: "100%",
         background: `radial-gradient(#bbb9, #eee9)`,
-        // ...(isLoading ? { width: "100%", paddingBottom: "100%" } : {}),
       }}
       {...containerProps}
     >
-      {!isLoading && (
-        <img className="absolute top-0 left-0" src={src} {...imgProps} />
-      )}
+      <img
+        className="absolute top-0 left-0"
+        src={require(`../assets/${path}?resize&size=500}`)}
+        {...imgProps}
+      />
     </div>
   );
 };
