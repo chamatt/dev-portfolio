@@ -7,7 +7,20 @@ import {
   FaBook,
   FaEnvelope,
 } from "react-icons/fa";
-import { DiHaskell } from "react-icons/di";
+import {
+  DiHaskell,
+  DiPython,
+  DiReact,
+  DiSass,
+  DiCss3,
+  DiHtml5,
+  DiNodejsSmall,
+  DiMongodb,
+  DiPostgresql,
+  DiMysql,
+  DiAndroid,
+  DiApple,
+} from "react-icons/di";
 import { GrGraphQl, GrGatsbyjs } from "react-icons/gr";
 import { IconBaseProps } from "react-icons";
 // import { Container } from './styles';
@@ -40,38 +53,36 @@ function nextjsIcon(props) {
 const LanguageStack = [
   { icon: "typescript-plain", name: "Typescript" },
   { icon: "javascript-plain", name: "Javascript" },
-  { icon: "python-plain", name: "Python" },
+  { name: "Python", custom: DiPython },
   { icon: "cplusplus-plain", name: "C++" },
-  { icon: null, name: "Haskell", custom: DiHaskell },
+  { name: "Haskell", custom: DiHaskell },
 ];
 
 const FrontEndStack = [
-  { icon: "react-plain", name: "React.js" },
+  { name: "React.js", custom: DiReact },
   {
-    icon: null,
     name: "Next.js",
     custom: nextjsIcon,
   },
   {
-    icon: null,
     name: "Gatsby",
     custom: GrGatsbyjs,
   },
-  { icon: "android-plain", name: "React Native" },
-  { icon: "apple-plain", name: "ReactNative" },
-  { icon: "react-plain", name: "Redux" },
-  { icon: null, name: "Apollo", custom: GrGraphQl },
-  { icon: "sass-plain", name: "SaSS" },
-  { icon: "html5-plain", name: "HTML" },
-  { icon: "css3-plain", name: "CSS" },
+  { name: "React Native", custom: DiAndroid },
+  { name: "ReactNative", custom: DiApple },
+  { name: "Redux", custom: DiReact },
+  { name: "Apollo", custom: GrGraphQl },
+  { name: "SaSS", custom: DiSass },
+  { name: "HTML", custom: DiHtml5 },
+  { name: "CSS", custom: DiCss3 },
 ];
 const BackEndStack = [
-  { icon: "nodejs-plain", name: "Node.js" },
-  { icon: "mongodb-plain", name: "MongoDB" },
+  { name: "Node.js", custom: DiNodejsSmall },
+  { name: "MongoDB", custom: DiMongodb },
   { icon: "postgresql-plain", name: "Postgres" },
-  { icon: "mysql-plain", name: "MySQL" },
+  { name: "MySQL", custom: DiMysql },
   { icon: "redis-plain", name: "Redis" },
-  { icon: null, name: "ApolloServer", custom: GrGraphQl },
+  { name: "ApolloServer", custom: GrGraphQl },
   { icon: "sequelize-plain", name: "Sequelize" },
 ];
 
