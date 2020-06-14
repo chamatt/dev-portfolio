@@ -71,10 +71,6 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
       <div className="w-full mt-8 pb-4">
-        {/* <img
-          className="mx-auto dark:filter-invert"
-          src={require("../assets/mouse-scrolling.png?resize&size=40").src}
-        ></img> */}
         <div className="dark:hidden">
           <Lottie
             options={{
