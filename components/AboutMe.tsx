@@ -88,7 +88,7 @@ const BackEndStack = [
 
 interface TechStackProps {
   title: string;
-  stack: Array<{ icon: string; name: string; custom?: React.ReactType }>;
+  stack: Array<{ icon?: string; name: string; custom?: React.ReactType }>;
 }
 
 const TechStack: React.FC<TechStackProps> = ({ title, stack }) => {
