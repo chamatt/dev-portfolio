@@ -18,21 +18,21 @@ const ProjectsSection: React.FC<Props> = ({ title, subtitle }) => {
           <div className="flex flex-col sm:flex-row grid grid-cols-12 col-gap-0 row-gap-8 sm:col-gap-8">
             <div className="col-span-12 sm:col-span-6 lg:col-span-4">
               <ProjectCard
-                imagePath="project-resources.jpg"
+                imagePath="img/project-resources.jpg"
                 title="NativeGram"
                 description="Keep track of your spending and start budgeting"
               />
             </div>
             <div className="col-span-12 sm:col-span-6 lg:col-span-4">
               <ProjectCard
-                imagePath="project-resources.jpg"
+                imagePath="img/project-resources.jpg"
                 title="NativeGram"
                 description="Keep track of your spending and start budgeting"
               />
             </div>
             <div className="col-span-12 sm:col-span-6 lg:col-span-4">
               <ProjectCard
-                imagePath="project-fortnite.jpg"
+                imagePath="img/project-fortnite.jpg"
                 title="Finance App"
                 description="Keep track of your spending and start budgeting"
               />

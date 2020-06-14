@@ -13,10 +13,10 @@ const Image: React.FC<Props> = ({
   containerProps = {},
   imgProps = {},
 }) => {
-  const { src } = useImage({
-    srcList: [require(`../assets/${path}`)],
-    useSuspense: false,
-  });
+  // const { src } = useImage({
+  //   srcList: [require(`../assets/${path}`)],
+  //   useSuspense: false,
+  // });
 
   return (
     <div
@@ -27,11 +27,7 @@ const Image: React.FC<Props> = ({
       }}
       {...containerProps}
     >
-      <img
-        className="absolute top-0 left-0"
-        src={require(`../assets/${path}?resize&size=500}`)}
-        {...imgProps}
-      />
+      <img className="absolute top-0 left-0" src={path} {...imgProps} />
     </div>
   );
 };
