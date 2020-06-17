@@ -11,6 +11,7 @@
   "dependencies": {
     "babel-plugin-inline-react-svg": "^1.1.1",
     "classnames": "^2.2.6",
+    "date-fns": "^2.14.0",
     "devicon": "^2.2.0",
     "imagemin-svgo": "^8.0.0",
     "jimp": "^0.13.0",
@@ -23,6 +24,7 @@
     "react-icons": "^3.10.0",
     "react-image": "^4.0.1",
     "react-lottie": "^1.2.3",
+    "rss-parser": "^3.8.0",
     "tailwindcss-filters": "^3.0.0"
   },
   "devDependencies": {
