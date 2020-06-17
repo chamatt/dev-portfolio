@@ -1,19 +1,28 @@
 import classNames from "classnames";
+import { ButtonHTMLAttributes, AnchorHTMLAttributes } from "react";
 
 interface ButtonProps {
   variant: "primary" | "secondary";
   className?: string;
   size?: "small" | "normal" | "big";
+  as?: React.ReactType;
 }
 
-export const Button: React.FC<ButtonProps> = ({
+export const Button: React.FC<
+  ButtonProps &
+    ButtonHTMLAttributes<HTMLButtonElement> &
+    AnchorHTMLAttributes<HTMLAnchorElement>
+> = ({
   variant = "primary",
   className,
   size = "normal",
   children,
+  as = "button",
+  ...props
 }) => {
+  const Component: React.ReactType = as as React.ReactType;
   return (
-    <button
+    <Component
       className={classNames(
         "text-white font-bold font-display py-2 px-4 uppercase flex justify-center items-center transition duration-200 ease-in-out transform  hover:-translate-y-1",
         {
@@ -27,8 +36,9 @@ export const Button: React.FC<ButtonProps> = ({
           [className]: className,
         }
       )}
+      {...props}
     >
       {children}
-    </button>
+    </Component>
   );
 };
