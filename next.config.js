@@ -1,7 +1,7 @@
 const withPlugins = require("next-compose-plugins");
 const optimizedImages = require("next-optimized-images");
 
-const webpackconfig = (config, options) => {
+function webpackconfig(config, options) {
   config.module.rules.push(
     {
       test: /\.md$/,
@@ -15,10 +15,10 @@ const webpackconfig = (config, options) => {
     }
   );
   return config;
-},
+}
 
-var nextConfig = {
-  webpack: webpackconfig
+const nextConfig = {
+  webpack: webpackconfig,
 };
 
 module.exports = withPlugins(
