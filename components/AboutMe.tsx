@@ -128,6 +128,7 @@ const AboutMe: React.FC = () => {
             <div className="w-full bg-default shadow-lg p-10 sm:p-4 lg:p-10">
               <div className="flex justify-center mb-6 w-full">
                 <img
+                  alt="profile picture"
                   className="object-contain w-full"
                   src={attributes.profile_picture}
                 />
@@ -198,13 +199,24 @@ const AboutMe: React.FC = () => {
 };
 
 const SocialIcons = [
-  { icon: FaGithub, color: "#333", link: attributes.github },
+  {
+    icon: FaGithub,
+    color: "#333",
+    link: attributes.github,
+    name: "github profile",
+  },
   {
     icon: FaLinkedinIn,
     color: "#0e76a8",
     link: "https://www.linkedin.com/in/matheus-vicente-d-190001b2/",
+    name: "linkedin profile",
   },
-  { icon: FaEnvelope, color: "#ea4335", link: `mailto:${attributes.email}` },
+  {
+    icon: FaEnvelope,
+    color: "#ea4335",
+    link: `mailto:${attributes.email}`,
+    name: "email address",
+  },
 ];
 
 interface SocialButtonProps {
@@ -218,11 +230,13 @@ const SocialButton: React.FC<IconBaseProps & SocialButtonProps> = ({
   icon,
   color,
   link,
+  name,
   ...iconProps
 }) => {
   const Component: React.ReactType = icon;
   return (
     <a
+      aria-label={name}
       href={link}
       className="rounded-full text-white flex items-center justify-center p-1"
       style={{ backgroundColor: color, width: size, height: size }}

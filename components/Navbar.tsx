@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
       </div>
       <div className="m-4">
         <div className="sm:hidden fixed top-0 right-0 m-2 p-2 z-10 cursor-pointer dark:filter-invert">
-          <img src={require("../assets/menu-icon.svg")} />
+          <img alt="menu icon" src={require("../assets/menu-icon.svg")} />
         </div>
       </div>
     </>

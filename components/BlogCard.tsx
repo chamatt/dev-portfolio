@@ -16,6 +16,7 @@ const BlogCard: React.FC<Props> = ({
         <div className="w-16 h-16 lg:w-24 lg:h-24">
           <div className="sm:h-6 lg:h-0"></div>
           <img
+            alt="blog post image"
             className="object-contain w-full"
             src={require(`../assets/${imagePath}?resize&size=100`).src}
           ></img>

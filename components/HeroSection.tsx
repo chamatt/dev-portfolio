@@ -34,6 +34,7 @@ const HeroSection: React.FC = () => {
       <div className="flex flex-col sm:flex-row">
         <div className="sm:hidden h-64 mx-auto mt-8 relative">
           <img
+            alt="drawing of a guy with a huge hair"
             className="object-fit h-full"
             src={require("../assets/peep-standing-half.png")}
           ></img>
@@ -71,10 +72,14 @@ const HeroSection: React.FC = () => {
         </div>
         <div className="w-full sm:w-1/2">
           <div className="hidden sm:flex lg:hidden justify-end lg:max-h-600">
-            <img src={require("../assets/peep-standing-svg.svg")}></img>
+            <img
+              alt="drawing of a guy with a huge hair standing"
+              src={require("../assets/peep-standing-svg.svg")}
+            ></img>
           </div>
           <div className="hidden lg:flex justify-end lg:max-h-70-screen relative">
             <img
+              alt="drawing of a guy with a huge hair"
               className="object-contain"
               src={require("../assets/peep-standing-half.png")}
             ></img>
