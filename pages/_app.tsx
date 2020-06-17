@@ -3,6 +3,11 @@ import Head from "next/head";
 import "../styles/global.css";
 import "../assets/fonts/custom-devicon/style.css";
 
+function onLoadFont() {
+  this.onload = null;
+  this.rel = "stylesheet";
+}
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -21,10 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           rel="preload"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
           as="style"
-          onLoad={() => {
-            this.onload = null;
-            this.rel = "stylesheet";
-          }}
+          onLoad={onLoadFont}
         />
         <noscript>
           <link
