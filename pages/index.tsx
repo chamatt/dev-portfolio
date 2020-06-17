@@ -1,13 +1,9 @@
-import Head from "next/head";
-import { Button } from "../components/Button";
-import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import ProjectsSection from "../components/ProjectsSection";
 import BlogSection from "../components/BlogSection";
 import FooterCredits from "../components/FooterCredits";
 import AboutMe from "../components/AboutMe";
-import { GetStaticPaths, GetStaticProps } from "next";
-import { useEffect } from "react";
+import { GetStaticProps } from "next";
 import Parser from "rss-parser";
 let parser = new Parser();
 
