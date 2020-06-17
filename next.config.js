@@ -17,7 +17,7 @@ const webpackconfig = (config, options) => {
   return config;
 },
 
-const nextConfig = {
+var nextConfig = {
   webpack: webpackconfig
 };
 
