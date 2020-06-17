@@ -70,7 +70,7 @@ module.exports = {
     backdropFilter: ["responsive"], // defaults to ['responsive']
   },
   plugins: [
-    function ({ addBase, config }) {
+    function darkMode({ addBase, config }) {
       addBase({
         body: {
           color: config("theme.colors.black"),
