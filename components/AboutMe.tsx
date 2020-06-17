@@ -145,7 +145,7 @@ const AboutMe: React.FC = () => {
                   <span>{attributes.location}</span>
                 </div>
                 <div className="flex items-center py-2">
-                  {SocialIcons.map(({ icon, color, link }, index) => (
+                  {SocialIcons.map(({ icon, color, link, name }, index) => (
                     <div
                       className={classNames({
                         "mx-1": index > 0,
@@ -156,6 +156,7 @@ const AboutMe: React.FC = () => {
                         color={color}
                         icon={icon}
                         link={link}
+                        name={name}
                         size={32}
                       />
                     </div>
