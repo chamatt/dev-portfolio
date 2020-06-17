@@ -223,6 +223,7 @@ interface SocialButtonProps {
   size: number;
   icon: React.ReactType;
   link: string;
+  name: string;
 }
 
 const SocialButton: React.FC<IconBaseProps & SocialButtonProps> = ({
@@ -236,7 +237,7 @@ const SocialButton: React.FC<IconBaseProps & SocialButtonProps> = ({
   const Component: React.ReactType = icon;
   return (
     <a
-      aria-label={name}
+      aria-label={name || "profile"}
       href={link}
       className="rounded-full text-white flex items-center justify-center p-1"
       style={{ backgroundColor: color, width: size, height: size }}
