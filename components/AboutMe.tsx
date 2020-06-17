@@ -119,7 +119,6 @@ const TechStack: React.FC<TechStackProps> = ({ title, stack }) => {
 };
 
 const AboutMe: React.FC = () => {
-  console.log(attributes);
   return (
     <div className="bg-accent py-10 sm:py-20">
       <Container as="section">
@@ -147,6 +146,7 @@ const AboutMe: React.FC = () => {
                 <div className="flex items-center py-2">
                   {SocialIcons.map(({ icon, color, link, name }, index) => (
                     <div
+                      key={name}
                       className={classNames({
                         "mx-1": index > 0,
                         "mr-1": index === 0,
