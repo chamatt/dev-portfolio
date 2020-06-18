@@ -33,10 +33,7 @@ export default function Home({ blogPosts, githubRepos }: HomeProps) {
 export const getStaticProps = async (ctx: GetStaticProps) => {
   const feed = await feedParser("matt.vicent");
 
-  const githubRepos = await getGithubRepos([
-    "https://github.com/chamatt/nativegram",
-    "https://github.com/chamatt/survey-web-app",
-  ]);
+  const githubRepos = await getGithubRepos();
 
   return {
     props: {

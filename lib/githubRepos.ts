@@ -22,7 +22,7 @@ interface ProjectsFile {
   thumbnail?: string;
   order?: number;
 }
-const getGithubRepos = async (repoLinks: string[]): Promise<IGithubRepo[]> => {
+const getGithubRepos = async (): Promise<IGithubRepo[]> => {
   const projectsDir = await getProjects();
 
   const repos = projectsDir.map(({ repo, thumbnail, order }: any) => {
