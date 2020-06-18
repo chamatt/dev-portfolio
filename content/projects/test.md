@@ -1,5 +1,7 @@
 ---
-repo: https://github.com/chamatt/nativegram
-order: 1
+repo: 'https://github.com/chamatt/nativegram'
 thumbnail: /img/kanban-board.jpg
+order: 1
+slug-field: nativegram
 ---
+
