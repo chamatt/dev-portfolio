@@ -27,7 +27,12 @@ const Image: React.FC<Props> = ({
       }}
       {...containerProps}
     >
-      <img alt="" className="absolute top-0 left-0" src={path} {...imgProps} />
+      <img
+        alt=""
+        className="absolute top-0 left-0 h-full object-cover"
+        src={path}
+        {...imgProps}
+      />
     </div>
   );
 };

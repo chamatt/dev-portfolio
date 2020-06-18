@@ -63,6 +63,13 @@ module.exports = {
         light: { raw: "(prefers-color-scheme: light)" },
         dark: { raw: "(prefers-color-scheme: dark)" },
       },
+      truncate: {
+        lines: {
+          3: "3",
+          5: "5",
+          8: "8",
+        },
+      },
     },
   },
   variants: {
@@ -86,5 +93,7 @@ module.exports = {
     },
 
     require("tailwindcss-filters"),
+
+    require("tailwindcss-truncate-multiline")(),
   ],
 };

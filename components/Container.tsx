@@ -10,7 +10,7 @@ const Container: React.FC<Props> = ({ children, className, as = "div" }) => {
   return (
     <Component
       className={classNames(
-        "px-4 sm:px-8 container mx-auto min-h-screen sm:min-h-0 xl:max-width-none",
+        "px-4 sm:px-8 container mx-auto sm:min-h-0 xl:max-width-none",
         { [className]: className }
       )}
     >

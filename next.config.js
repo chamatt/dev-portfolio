@@ -19,7 +19,6 @@ function webpackconfig(config, options) {
   );
   return config;
 }
-
 const nextConfig = {
   webpack: webpackconfig,
 };

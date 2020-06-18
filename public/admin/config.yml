@@ -16,6 +16,15 @@ collections:
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
       - { label: "Author", name: "author", widget: "string", default: "Admin" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "projects" # Used in routes, e.g., /admin/collections/blog
+    label: "Projects" # Used in the UI
+    folder: "content/projects" # The path to the folder where the markdown files are stored
+    create: true # Allow users to create new markdown files.
+    slug: "{{slug}}.yml" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for front matter. You will need to modify fields according to your project.
+      - { label: "Repo Link", name: "repo", widget: "string" }
+      - { label: "Image", name: "thumbnail", widget: "image" }
+      - { label: "Order", name: "order", widget: "number" }
   - label: "Home"
     name: "home"
     files:

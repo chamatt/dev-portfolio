@@ -4,15 +4,26 @@ import BlogSection from "../components/BlogSection";
 import FooterCredits from "../components/FooterCredits";
 import AboutMe from "../components/AboutMe";
 import { GetStaticProps } from "next";
+import feedParser, { IBlogPost } from "../lib/feedParser";
+import getGithubRepos, { IGithubRepo } from "../lib/githubRepos";
 import Parser from "rss-parser";
 let parser = new Parser();
 
-export default function Home({ blogPosts }) {
+interface HomeProps {
+  blogPosts: IBlogPost[];
+  githubRepos: IGithubRepo[];
+}
+
+export default function Home({ blogPosts, githubRepos }: HomeProps) {
   return (
     <div>
       <HeroSection />
       <AboutMe />
-      <ProjectsSection title="personal" subtitle="projects" />
+      <ProjectsSection
+        title="personal"
+        subtitle="projects"
+        repos={githubRepos}
+      />
       <BlogSection title="blog" subtitle="posts" posts={blogPosts} />
       <FooterCredits />
     </div>
@@ -20,26 +31,17 @@ export default function Home({ blogPosts }) {
 }
 
 export const getStaticProps = async (ctx: GetStaticProps) => {
-  const feed = await parser
-    .parseURL("https://medium.com/feed/@matt.vicent")
-    .then((data) => {
-      // Fillter the array
-      const res = data.items; //This is an array with the content. No feed, no info about author etc..
-      const posts = res.filter((item) => item.categories.length > 0); // That's the main trick* !
-      return posts;
-    });
+  const feed = await feedParser("matt.vicent");
 
-  const feedMin = feed.map((blog) => ({
-    title: blog?.title ?? null,
-    isoDate: blog?.isoDate ?? null,
-    link: blog?.link ?? null,
-    guid: blog?.guid ?? null,
-    thumbnail: blog?.thumbnail ?? null,
-  }));
+  const githubRepos = await getGithubRepos([
+    "https://github.com/chamatt/nativegram",
+    "https://github.com/chamatt/survey-web-app",
+  ]);
 
   return {
     props: {
-      blogPosts: feedMin,
+      blogPosts: feed,
+      githubRepos,
     },
   };
 };

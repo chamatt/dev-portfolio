@@ -3,17 +3,12 @@ import Container from "./Container";
 import SectionTitle from "./SectionTitle";
 import BlogCard from "./BlogCard";
 import { Button } from "./Button";
+import { IBlogPost } from "../lib/feedParser";
 
 interface Props {
   title: string;
   subtitle: string;
-  posts?: {
-    title?: string;
-    isoDate?: string;
-    link?: string;
-    guid?: string;
-    thumbnail?: string;
-  }[];
+  posts?: IBlogPost[];
 }
 
 const BlogSection: React.FC<Props> = ({ title, subtitle, posts = [] }) => {
