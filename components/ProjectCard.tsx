@@ -9,7 +9,7 @@ interface Props {
 const ProjectCard: React.FC<Props> = ({ repo }) => {
   return (
     <a href={repo.url} className="cursor-pointer w-full">
-      <Image path={repo.thumbnail} />
+      <div className="shadow-sm"><Image path={repo.thumbnail} /></div>
 
       <div className="relative bg-accent shadow-lg p-4 -mt-12 m-4 text-darkgray dark:text-white">
         <div className="flex items-center fill-current">

@@ -9,6 +9,9 @@ import getGithubRepos, { IGithubRepo } from "../lib/githubRepos";
 import Parser from "rss-parser";
 import AOS from 'aos';
 import { useEffect } from "react";
+import Container from "../components/Container";
+import ExpandAccordionGrid from "../components/ExpandAccordionGrid";
+
 
 let parser = new Parser();
 
@@ -33,6 +36,9 @@ export default function Home({ blogPosts, githubRepos }: HomeProps) {
         repos={githubRepos}
       />
       <BlogSection title="blog" subtitle="posts" posts={blogPosts} />
+      <Container>
+        <ExpandAccordionGrid/>
+      </Container>
       <FooterCredits />
     </div>
   );

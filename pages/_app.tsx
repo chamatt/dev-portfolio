@@ -2,7 +2,6 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import "../styles/global.css";
 import "../assets/fonts/custom-devicon/style.css";
-
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 function onLoadFont() {

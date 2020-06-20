@@ -75,6 +75,7 @@ module.exports = {
   variants: {
     filter: ["responsive"], // defaults to ['responsive']
     backdropFilter: ["responsive"], // defaults to ['responsive']
+    borderWidth: ['responsive', 'hover', 'focus'],
   },
   plugins: [
     function darkMode({ addBase, config }) {
