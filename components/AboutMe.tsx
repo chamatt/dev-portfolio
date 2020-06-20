@@ -93,12 +93,13 @@ interface TechStackProps {
 
 const TechStack: React.FC<TechStackProps> = ({ title, stack }) => {
   return (
-    <div className="py-2 w-full">
-      <h3 className="text-md text-darkgray dark:text-white pb-4 uppercase font-bold">
+    <div className="py-2 w-full" >
+      <div data-aos="fade-up">
+        <h3 className="text-md text-darkgray dark:text-white pb-4 uppercase font-bold">
         {title}
-      </h3>
+      </h3></div>
       <div className="flex flex-row flex-wrap justify-start">
-        {stack.map(({ icon, name, custom }) => {
+        {stack.map(({ icon, name, custom }, i) => {
           const Custom = custom ?? null;
           const Icon = icon
             ? () => <i className={`devicon-${icon} text-5xl`}></i>
@@ -107,6 +108,8 @@ const TechStack: React.FC<TechStackProps> = ({ title, stack }) => {
             <div
               key={name}
               className="flex flex-col items-center w-20 hover:text-indigo-500 text-gray-600 dark:text-gray-400 py-2"
+              data-aos="fade-up"
+              data-aos-delay={(i + 1) * 50}
             >
               <Icon />
               <p className="text-xs pt-2">{name}</p>
@@ -123,7 +126,12 @@ const AboutMe: React.FC = () => {
     <div className="bg-accent py-10 sm:py-20">
       <Container as="section">
         <div className="grid grid-cols-12 grid-flow-row">
-          <div className="col-span-12 sm:col-span-4 lg:col-span-3 w-full">
+          <div className="col-span-12 sm:col-span-4 lg:col-span-3 w-full"
+            data-aos="fade-right"
+            data-aos-delay={150}
+            data-aos-offset={50}
+            data-aos-easing="ease-out"
+          >
             <div className="w-full bg-default shadow-lg p-10 sm:p-4 lg:p-10">
               <div className="flex justify-center mb-6 w-full">
                 <img

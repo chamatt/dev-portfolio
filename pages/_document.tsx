@@ -14,6 +14,7 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
+        {/* <script type="text/javascript" src="/js/colorSwarm.js"></script> */}
       </Html>
     );
   }

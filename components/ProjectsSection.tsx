@@ -1,4 +1,3 @@
-import React from "react";
 import Container from "./Container";
 import SectionTitle from "./SectionTitle";
 import ProjectCard from "./ProjectCard";
@@ -18,11 +17,15 @@ const ProjectsSection: React.FC<Props> = ({ title, subtitle, repos }) => {
         <SectionTitle title={title} subtitle={subtitle}></SectionTitle>
         <div className="py-10 sm:py-20">
           <div className="flex flex-col sm:flex-row grid grid-cols-12 col-gap-0 row-gap-8 sm:col-gap-8">
-            {repos.map((repo) => {
+            {repos.map((repo, i) => {
               return (
                 <div
                   key={repo.name}
                   className="col-span-12 sm:col-span-6 lg:col-span-4"
+                  data-aos="fade-up"
+                  data-aos-offset="50"
+                  data-aos-easing="ease-out"
+                  data-aos-delay={((i+1) * 150)}
                 >
                   <ProjectCard repo={repo} />
                 </div>

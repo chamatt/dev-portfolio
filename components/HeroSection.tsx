@@ -31,6 +31,7 @@ const HeroSection: React.FC = () => {
   return (
     <Container as="section" className="min-h-screen sm:min-h-0">
       <Navbar />
+      <canvas className="absolute left-0 top-0" style={{zIndex: -1, opacity: 0.8}} color-swarm="true"></canvas>
       <div className="flex flex-col sm:flex-row">
         <div className="sm:hidden h-64 mx-auto mt-8 relative">
           <img

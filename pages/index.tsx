@@ -7,6 +7,9 @@ import { GetStaticProps } from "next";
 import feedParser, { IBlogPost } from "../lib/feedParser";
 import getGithubRepos, { IGithubRepo } from "../lib/githubRepos";
 import Parser from "rss-parser";
+import AOS from 'aos';
+import { useEffect } from "react";
+
 let parser = new Parser();
 
 interface HomeProps {
@@ -15,6 +18,11 @@ interface HomeProps {
 }
 
 export default function Home({ blogPosts, githubRepos }: HomeProps) {
+  useEffect(() => {
+    AOS.init({
+      once: true
+    });
+  },[])
   return (
     <div>
       <HeroSection />
@@ -38,7 +46,7 @@ export const getStaticProps = async (ctx: GetStaticProps) => {
   return {
     props: {
       blogPosts: feed,
-      githubRepos,
+      githubRepos: githubRepos || null,
     },
   };
 };
