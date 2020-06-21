@@ -1,12 +1,3 @@
-import React, { ReactElement, ReactType } from "react";
-
-import {
-  FaGithub,
-  FaLinkedinIn,
-  FaLocationArrow,
-  FaBook,
-  FaEnvelope,
-} from "react-icons/fa";
 import {
   DiHaskell,
   DiPython,
@@ -16,19 +7,14 @@ import {
   DiHtml5,
   DiNodejsSmall,
   DiMongodb,
-  DiPostgresql,
   DiMysql,
   DiAndroid,
   DiApple,
 } from "react-icons/di";
 import { GrGraphQl, GrGatsbyjs } from "react-icons/gr";
-import { IconBaseProps } from "react-icons";
-// import { Container } from './styles';
-import classNames from "classnames";
-import SectionTitle from "./SectionTitle";
-import Container from "./Container";
-import { Button } from "./Button";
-import attributes from "../content/landing/profile.yml";
+import SectionTitle from "../components/SectionTitle";
+import Container from "../components/Container";
+import PersonalCard from "../components/PersonalCard";
 
 function nextjsIcon(props) {
   return (
@@ -93,11 +79,12 @@ interface TechStackProps {
 
 const TechStack: React.FC<TechStackProps> = ({ title, stack }) => {
   return (
-    <div className="py-2 w-full" >
+    <div className="py-2 w-full">
       <div data-aos="fade-up">
         <h3 className="text-md text-darkgray dark:text-white pb-4 uppercase font-bold">
-        {title}
-      </h3></div>
+          {title}
+        </h3>
+      </div>
       <div className="flex flex-row flex-wrap justify-start">
         {stack.map(({ icon, name, custom }, i) => {
           const Custom = custom ?? null;
@@ -126,62 +113,8 @@ const AboutMe: React.FC = () => {
     <div className="bg-accent py-10 sm:py-20">
       <Container as="section">
         <div className="grid grid-cols-12 grid-flow-row">
-          <div className="col-span-12 sm:col-span-4 lg:col-span-3 w-full"
-            data-aos="fade-right"
-            data-aos-delay={150}
-            data-aos-offset={50}
-            data-aos-easing="ease-out"
-          >
-            <div className="w-full bg-default shadow-lg p-10 sm:p-4 lg:p-10">
-              <div className="flex justify-center mb-6 w-full">
-                <img
-                  alt="profile picture"
-                  className="object-contain w-full"
-                  src={attributes.profile_picture}
-                />
-              </div>
-              <h2 className="font-bold text-2xl sm:text-3xl leading-tight">
-                {attributes.name}
-              </h2>
-              <p className="py-2">{attributes.description}</p>
-              <div className=" flex items-center justify-between flex-wrap">
-                <div className="text-md text-gray-700 dark:text-gray-400 flex items-center py-2 ">
-                  <span className="mr-2">
-                    <FaLocationArrow />
-                  </span>
-                  <span>{attributes.location}</span>
-                </div>
-                <div className="flex items-center py-2">
-                  {SocialIcons.map(({ icon, color, link, name }, index) => (
-                    <div
-                      key={name}
-                      className={classNames({
-                        "mx-1": index > 0,
-                        "mr-1": index === 0,
-                      })}
-                    >
-                      <SocialButton
-                        color={color}
-                        icon={icon}
-                        link={link}
-                        name={name}
-                        size={32}
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <a
-                className="cursor-pointer hover:text-indigo-500 flex items-center py-4"
-                href="/pdf/resume.pdf"
-              >
-                <FaBook />
-                <span className="pl-2 text-sm ">Resumé</span>
-              </a>
-              <Button variant="primary" className="w-full mt-1" size="small">
-                Contact me
-              </Button>
-            </div>
+          <div className="col-span-12 sm:col-span-4 lg:col-span-3 w-full">
+            <PersonalCard />
           </div>
           <div className="col-span-12 sm:col-span-8 lg:col-span-9 w-full pl-0 sm:pl-20 pt-10 sm:pt-0">
             <SectionTitle
@@ -207,52 +140,4 @@ const AboutMe: React.FC = () => {
   );
 };
 
-const SocialIcons = [
-  {
-    icon: FaGithub,
-    color: "#333",
-    link: attributes.github,
-    name: "github profile",
-  },
-  {
-    icon: FaLinkedinIn,
-    color: "#0e76a8",
-    link: "https://www.linkedin.com/in/matheus-vicente-d-190001b2/",
-    name: "linkedin profile",
-  },
-  {
-    icon: FaEnvelope,
-    color: "#ea4335",
-    link: `mailto:${attributes.email}`,
-    name: "email address",
-  },
-];
-
-interface SocialButtonProps {
-  size: number;
-  icon: React.ReactType;
-  link: string;
-  name: string;
-}
-
-const SocialButton: React.FC<IconBaseProps & SocialButtonProps> = ({
-  size = 16,
-  icon,
-  color,
-  link,
-  name,
-  ...iconProps
-}) => {
-  const Component: React.ReactType = icon;
-  return (
-    <a
-      aria-label={name || "profile"}
-      href={link}
-      className="rounded-full text-white flex items-center justify-center p-1"
-      style={{ backgroundColor: color, width: size, height: size }}
-    >
-      <Component size={Math.ceil(size * (7 / 12))} {...iconProps} />
-    </a>
-  );
-};
 export default AboutMe;

@@ -1,7 +1,7 @@
 import React from "react";
-import ExpandAccordionGrid from "./ExpandAccordionGrid";
-import SectionTitle from "./SectionTitle";
-import Container from "./Container";
+import ExpandAccordionGrid from "../components/ExpandAccordionGrid";
+import SectionTitle from "../components/SectionTitle";
+import Container from "../components/Container";
 
 // import { Container } from './styles';
 

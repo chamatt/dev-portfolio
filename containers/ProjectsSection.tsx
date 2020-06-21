@@ -1,7 +1,7 @@
-import Container from "./Container";
-import SectionTitle from "./SectionTitle";
-import ProjectCard from "./ProjectCard";
-import { Button } from "./Button";
+import Container from "../components/Container";
+import SectionTitle from "../components/SectionTitle";
+import ProjectCard from "../components/ProjectCard";
+import { Button } from "../components/Button";
 import { IGithubRepo } from "../lib/githubRepos";
 
 interface Props {
@@ -25,7 +25,7 @@ const ProjectsSection: React.FC<Props> = ({ title, subtitle, repos }) => {
                   data-aos="fade-up"
                   data-aos-offset="50"
                   data-aos-easing="ease-out"
-                  data-aos-delay={((i+1) * 150)}
+                  data-aos-delay={(i + 1) * 150}
                 >
                   <ProjectCard repo={repo} />
                 </div>
