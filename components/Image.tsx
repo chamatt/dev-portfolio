@@ -20,7 +20,7 @@ const Image: React.FC<Props> = ({
 
   return (
     <div
-      className="w-full hover:shadow-lg relative"
+      className="w-full relative"
       style={{
         paddingTop: "100%",
         background: `radial-gradient(#bbb9, #eee9)`,

@@ -9,8 +9,10 @@ const Navbar: React.FC = () => {
             (item: string, index: number) => {
               return (
                 <li key={item} className="text-xl font-bold ">
-                  {index >= 1 && <span className="mx-3">●</span>}
-                  <span className="pb-2 border-b-2 border-transparent hover:border-black cursor-pointer transition ease-in-out duration-200">
+                  {index >= 1 && (
+                    <span className="mx-3 text-sm select-none">●</span>
+                  )}
+                  <span className="pb-2 border-b-2 border-transparent hover:border-black dark:hover:border-white cursor-pointer transition ease-in-out duration-200">
                     {item}
                   </span>
                 </li>

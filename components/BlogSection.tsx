@@ -13,7 +13,7 @@ interface Props {
 
 const BlogSection: React.FC<Props> = ({ title, subtitle, posts = [] }) => {
   return (
-    <div className="bg-gray-0 py-10 sm:py-20 bg-accent">
+    <div className="bg-gray-0 py-10 sm:py-20 bg-default">
       <Container as="section">
         <div className="flex flex-row justify-between">
           <SectionTitle title={title} subtitle={subtitle}></SectionTitle>
