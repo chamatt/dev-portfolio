@@ -1,7 +1,12 @@
 const purgeCSS = require("@fullhuman/postcss-purgecss");
 
 module.exports = {
-  purge: ["./components/**/*.tsx", "./pages/**/*.tsx", "./assets/**/*.tsx"],
+  purge: {
+    content: ["./components/**/*.tsx", "./pages/**/*.tsx", "./assets/**/*.tsx"],
+    options: {
+      whitelistPattern: [/col-span-[0-9]+/],
+    },
+  },
   theme: {
     fontFamily: {
       sans:
@@ -75,7 +80,7 @@ module.exports = {
   variants: {
     filter: ["responsive"], // defaults to ['responsive']
     backdropFilter: ["responsive"], // defaults to ['responsive']
-    borderWidth: ['responsive', 'hover', 'focus'],
+    borderWidth: ["responsive", "hover", "focus"],
   },
   plugins: [
     function darkMode({ addBase, config }) {
