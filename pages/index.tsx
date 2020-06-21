@@ -7,11 +7,11 @@ import { GetStaticProps } from "next";
 import feedParser, { IBlogPost } from "../lib/feedParser";
 import getGithubRepos, { IGithubRepo } from "../lib/githubRepos";
 import Parser from "rss-parser";
-import AOS from 'aos';
+import AOS from "aos";
 import { useEffect } from "react";
 import Container from "../components/Container";
 import ExpandAccordionGrid from "../components/ExpandAccordionGrid";
-
+import ProfessionalSection from "../components/ProfessionalSection";
 
 let parser = new Parser();
 
@@ -23,9 +23,9 @@ interface HomeProps {
 export default function Home({ blogPosts, githubRepos }: HomeProps) {
   useEffect(() => {
     AOS.init({
-      once: true
+      once: true,
     });
-  },[])
+  }, []);
   return (
     <div>
       <HeroSection />
@@ -35,10 +35,8 @@ export default function Home({ blogPosts, githubRepos }: HomeProps) {
         subtitle="projects"
         repos={githubRepos}
       />
+      <ProfessionalSection />
       <BlogSection title="blog" subtitle="posts" posts={blogPosts} />
-      <Container>
-        <ExpandAccordionGrid/>
-      </Container>
       <FooterCredits />
     </div>
   );
