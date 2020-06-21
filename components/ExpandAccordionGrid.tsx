@@ -230,7 +230,7 @@ const ExpandAccordionGrid: React.FC<ExpandAccordionGridProps> = ({
   return (
     <>
       <motion.div className="grid grid-cols-12 col-gap-1 box-border">
-        {items.map(({ id, logo }, i) => {
+        {items.map(({ id, logo, project }, i) => {
           return (
             <React.Fragment key={id}>
               <motion.div
@@ -248,6 +248,7 @@ const ExpandAccordionGrid: React.FC<ExpandAccordionGridProps> = ({
                 <img
                   src={logo}
                   className="object-contain w-full h-full p-2 sm:p-4 dark:filter-invert"
+                  alt={project}
                 />
                 {selectedItem?.id === id && <SelectedBadge />}
               </motion.div>
