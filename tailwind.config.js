@@ -2,7 +2,12 @@ const purgeCSS = require("@fullhuman/postcss-purgecss");
 
 module.exports = {
   purge: {
-    content: ["./components/**/*.tsx", "./pages/**/*.tsx", "./assets/**/*.tsx"],
+    content: [
+      "./containers/**/*.tsx",
+      "./components/**/*.tsx",
+      "./pages/**/*.tsx",
+      "./assets/**/*.tsx",
+    ],
     options: {
       whitelist: [
         "col-span-1",

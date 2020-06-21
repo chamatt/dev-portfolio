@@ -1,17 +1,16 @@
-import HeroSection from "../components/HeroSection";
-import ProjectsSection from "../components/ProjectsSection";
-import BlogSection from "../components/BlogSection";
-import FooterCredits from "../components/FooterCredits";
-import AboutMe from "../components/AboutMe";
+import HeroSection from "../containers/HeroSection";
+import ProjectsSection from "../containers/ProjectsSection";
+import BlogSection from "../containers/BlogSection";
+import FooterCredits from "../containers/FooterCredits";
+import AboutMe from "../containers/AboutMe";
 import { GetStaticProps } from "next";
 import feedParser, { IBlogPost } from "../lib/feedParser";
 import getGithubRepos, { IGithubRepo } from "../lib/githubRepos";
 import Parser from "rss-parser";
 import AOS from "aos";
 import { useEffect } from "react";
-import Container from "../components/Container";
-import ExpandAccordionGrid from "../components/ExpandAccordionGrid";
-import ProfessionalSection from "../components/ProfessionalSection";
+import ProfessionalSection from "../containers/ProfessionalSection";
+import ContactSection from "../containers/ContactSection";
 
 let parser = new Parser();
 
@@ -37,6 +36,8 @@ export default function Home({ blogPosts, githubRepos }: HomeProps) {
       />
       <ProfessionalSection />
       <BlogSection title="blog" subtitle="posts" posts={blogPosts} />
+
+      <ContactSection />
       <FooterCredits />
     </div>
   );

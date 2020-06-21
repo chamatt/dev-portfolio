@@ -1,10 +1,10 @@
 import React from "react";
-import { Button } from "./Button";
-import Navbar from "./Navbar";
-import Container from "./Container";
+import { Button } from "../components/Button";
+import Navbar from "../components/Navbar";
+import Container from "../components/Container";
 import { BsMoon, BsSun } from "react-icons/bs";
 import { useDarkMode } from "../hooks/useDarkMode";
-import MovingBall from "./MovingBall";
+import MovingBall from "../components/MovingBall";
 import scrollblack from "../assets/scroll-black.json";
 import scrollwhite from "../assets/scroll-white.json";
 import Lottie from "react-lottie";
@@ -31,7 +31,11 @@ const HeroSection: React.FC = () => {
   return (
     <Container as="section" className="min-h-screen sm:min-h-0">
       <Navbar />
-      <canvas className="absolute left-0 top-0" style={{zIndex: -1, opacity: 0.8}} color-swarm="true"></canvas>
+      <canvas
+        className="absolute left-0 top-0"
+        style={{ zIndex: -1, opacity: 0.8 }}
+        color-swarm="true"
+      ></canvas>
       <div className="flex flex-col sm:flex-row">
         <div className="sm:hidden h-64 mx-auto mt-8 relative">
           <img

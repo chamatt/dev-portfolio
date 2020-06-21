@@ -1,8 +1,8 @@
 import React from "react";
-import Container from "./Container";
-import SectionTitle from "./SectionTitle";
-import BlogCard from "./BlogCard";
-import { Button } from "./Button";
+import Container from "../components/Container";
+import SectionTitle from "../components/SectionTitle";
+import BlogCard from "../components/BlogCard";
+import { Button } from "../components/Button";
 import { IBlogPost } from "../lib/feedParser";
 
 interface Props {
