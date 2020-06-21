@@ -146,6 +146,7 @@ const Expand: React.FC<ExpandProps> = ({
               <img
                 src={cover}
                 className="object-center w-full h-full object-cover"
+                alt={project}
               />
             </div>
             <div className="col-span-2 sm:col-span-1 w-full bg-default p-6">
