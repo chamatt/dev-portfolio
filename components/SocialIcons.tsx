@@ -18,7 +18,7 @@ export const SocialIcons = [
   {
     icon: FaLinkedinIn,
     color: "#0e76a8",
-    link: "https://www.linkedin.com/in/matheus-vicente-d-190001b2/",
+    link: attributes.linkedin,
     name: "linkedin profile",
   },
   {

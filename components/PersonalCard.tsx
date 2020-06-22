@@ -9,7 +9,7 @@ interface PersonalCardProps {
   showButton?: boolean;
 }
 
-const PersonalCard = ({ showButton = true }) => {
+const PersonalCard: React.FC<PersonalCardProps> = ({ showButton = true }) => {
   return (
     <div
       data-aos="fade-right"
