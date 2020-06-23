@@ -99,11 +99,11 @@ const ContactSection: React.FC = () => {
       Partial<FormValues>,
       "name" | "email" | "subject" | "message"
     >;
-    if (!values.name) errorObj.name = "Name is a required field";
+    if (!values.name) errorObj.name = "You must specify your name";
     else errorObj.name = null;
-    if (!values.email) errorObj.email = "Email is a required field";
+    if (!values.email) errorObj.email = "Email is required";
     else if (values.email && !validateEmail(values.email))
-      errorObj.email = "Email is invalid";
+      errorObj.email = "This email is invalid";
     else errorObj.email = null;
     if (!values.subject) errorObj.subject = "You must specify a subject";
     else errorObj.subject = null;
