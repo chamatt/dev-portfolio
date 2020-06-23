@@ -4,6 +4,7 @@ import { FaLocationArrow, FaBook } from "react-icons/fa";
 import { SocialIcons, SocialButton } from "./SocialIcons";
 import classNames from "classnames";
 import { Button } from "./Button";
+import { Link } from "react-scroll";
 
 interface PersonalCardProps {
   showButton?: boolean;
@@ -64,9 +65,11 @@ const PersonalCard: React.FC<PersonalCardProps> = ({ showButton = true }) => {
           <span className="pl-2 text-sm ">Resumé</span>
         </a>
         {showButton && (
-          <Button variant="primary" className="w-full mt-1" size="small">
-            Contact me
-          </Button>
+          <Link to="contact" smooth={true} offset={-50} duration={500}>
+            <Button variant="primary" className="w-full mt-1" size="small">
+              Contact me
+            </Button>
+          </Link>
         )}
       </div>
     </div>

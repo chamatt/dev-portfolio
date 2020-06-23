@@ -186,7 +186,7 @@ const ContactSection: React.FC = () => {
 
   return (
     <div className="py-10 bg-accent">
-      <Container>
+      <Container as="section" id="contact">
         <SectionTitle title="Reach out" subtitle="Contact" />
         <form
           action="https://api.staticforms.xyz/submit"

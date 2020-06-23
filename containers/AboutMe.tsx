@@ -111,7 +111,7 @@ const TechStack: React.FC<TechStackProps> = ({ title, stack }) => {
 const AboutMe: React.FC = () => {
   return (
     <div className="bg-accent py-10 sm:py-20">
-      <Container as="section">
+      <Container as="section" id="about-me">
         <div className="grid grid-cols-12 grid-flow-row">
           <div className="col-span-12 sm:col-span-4 lg:col-span-3 w-full">
             <PersonalCard />

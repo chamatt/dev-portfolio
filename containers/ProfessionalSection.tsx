@@ -8,7 +8,7 @@ import Container from "../components/Container";
 const ProfessionalSection: React.FC = () => {
   return (
     <div className="bg-accent py-10 sm:py-20">
-      <Container as="section">
+      <Container as="section" id="professional-projects">
         <SectionTitle title="Professional" subtitle="Projects"></SectionTitle>
         <div className="py-10">
           <ExpandAccordionGrid />

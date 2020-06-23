@@ -8,6 +8,7 @@ import MovingBall from "../components/MovingBall";
 import scrollblack from "../assets/scroll-black.json";
 import scrollwhite from "../assets/scroll-white.json";
 import Lottie from "react-lottie";
+import { Link } from "react-scroll";
 // import { Container } from './styles';
 
 import attributes from "../content/landing/hero.yml";
@@ -58,20 +59,31 @@ const HeroSection: React.FC = () => {
           <p className="pr-4 text-lg w-10/12">{attributes.intro}</p>
           <div className="flex flex-wrap mt-8 items-center sm:items-start sm:flex-col lg:flex-row">
             <div className="w-1/2 pr-1 sm:pr-0 xl:pr-1  sm:mb-4 sm:w-64 lg:mr-2">
-              <Button size="big" className="w-full" variant="primary">
-                <span className="hidden sm:block">
-                  {attributes.primary_button}
-                </span>
-                <span className="sm:hidden">{attributes.primary_button}</span>
-              </Button>
+              <Link
+                to="personal-projects"
+                smooth={true}
+                offset={-50}
+                duration={500}
+              >
+                <Button size="big" className="w-full" variant="primary">
+                  <span className="hidden sm:block">
+                    {attributes.primary_button}
+                  </span>
+                  <span className="sm:hidden">{attributes.primary_button}</span>
+                </Button>
+              </Link>
             </div>
             <div className="w-1/2 pl-1 sm:pl-0 xl:pl-1 sm:mb-4 sm:w-64 lg:mr-2">
-              <Button size="big" className="w-full" variant="secondary">
-                <span className="hidden sm:flex justify-end">
-                  {attributes.secondary_button}
-                </span>
-                <span className="sm:hidden">{attributes.secondary_button}</span>
-              </Button>
+              <Link to="contact" smooth={true} offset={-50} duration={800}>
+                <Button size="big" className="w-full" variant="secondary">
+                  <span className="hidden sm:flex justify-end">
+                    {attributes.secondary_button}
+                  </span>
+                  <span className="sm:hidden">
+                    {attributes.secondary_button}
+                  </span>
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

@@ -13,7 +13,7 @@ interface Props {
 const ProjectsSection: React.FC<Props> = ({ title, subtitle, repos }) => {
   return (
     <div className="bg-gray-0 py-10 sm:py-20">
-      <Container as="section">
+      <Container as="section" id="personal-projects">
         <SectionTitle title={title} subtitle={subtitle}></SectionTitle>
         <div className="py-10 sm:py-20">
           <div className="flex flex-col sm:flex-row grid grid-cols-12 col-gap-0 row-gap-8 sm:col-gap-8">

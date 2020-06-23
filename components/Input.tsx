@@ -34,7 +34,7 @@ const Input: React.FC<
       </label>
       <Component
         className={classNames(
-          "appearance-none block w-full bg-default text-gray-700 dark:text-white rounded py-3 px-4 mb-1 leading-tight focus:outline-none focus:bg-white dark:focus:bg-gray-700 border-2 border-transparent focus:-m-2 focus:border-purple-500",
+          "appearance-none block w-full bg-default text-gray-700 dark:text-white rounded py-3 px-4 mb-1 leading-tight focus:outline-none focus:bg-white dark:focus:bg-gray-700 border-2 border-gray-200 dark:border-transparent focus:-m-2 focus:border-purple-500",
           {
             "bg-default": appearance === "default",
             "bg-accent": appearance === "accent",
