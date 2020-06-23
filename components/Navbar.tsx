@@ -3,8 +3,8 @@ import { Link, Events } from "react-scroll";
 
 const Navbar: React.FC = () => {
   useEffect(() => {
-    Events.scrollEvent.register("begin");
-    Events.scrollEvent.register("end");
+    Events.scrollEvent.register("begin", function () {});
+    Events.scrollEvent.register("end", function () {});
 
     return () => {
       Events.scrollEvent.remove("begin");

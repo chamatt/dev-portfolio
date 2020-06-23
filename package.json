@@ -9,9 +9,7 @@
     "netlify-export": "npm run build && next export"
   },
   "dependencies": {
-    "@types/react-scroll": "^1.5.5",
     "aos": "^3.0.0-beta.6",
-    "babel-plugin-inline-react-svg": "^1.1.1",
     "classnames": "^2.2.6",
     "date-fns": "^2.14.0",
     "devicon": "^2.2.0",
@@ -30,8 +28,6 @@
     "react-lottie": "^1.2.3",
     "react-recipes": "^1.0.2",
     "react-scroll": "^1.7.16",
-    "remark": "^12.0.0",
-    "remark-html": "^11.0.2",
     "rss-parser": "^3.8.0",
     "tailwindcss-filters": "^3.0.0",
     "tailwindcss-truncate-multiline": "^1.0.3"
@@ -50,6 +46,8 @@
     "tailwindcss": "^1.4.6",
     "typescript": "^3.9.5",
     "webp-loader": "^0.6.0",
-    "yaml-loader": "^0.6.0"
+    "yaml-loader": "^0.6.0",
+    "@types/react-scroll": "^1.5.5",
+    "babel-plugin-inline-react-svg": "^1.1.1"
   }
 }
