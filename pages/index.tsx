@@ -24,6 +24,12 @@ export default function Home({ blogPosts, githubRepos }: HomeProps) {
     AOS.init({
       once: true,
     });
+
+    window.addEventListener("load", AOS.refresh);
+
+    return () => {
+      window.removeEventListener("load", AOS.refresh);
+    };
   }, []);
   return (
     <div>

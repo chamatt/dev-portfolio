@@ -19,10 +19,13 @@ const PersonalCard: React.FC<PersonalCardProps> = ({ showButton = true }) => {
       data-aos-easing="ease-out"
     >
       <div className="w-full bg-default shadow-lg p-10 sm:p-4 lg:p-10">
-        <div className="flex justify-center mb-6 w-full">
+        <div
+          className="flex justify-center mb-6 w-full relative"
+          style={{ paddingBottom: "100%" }}
+        >
           <img
             alt="profile picture"
-            className="object-contain w-full"
+            className="object-contain w-full absolute"
             src={attributes.profile_picture}
           />
         </div>

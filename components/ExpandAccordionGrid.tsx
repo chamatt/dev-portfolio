@@ -209,21 +209,21 @@ const ExpandAccordionGrid: React.FC<ExpandAccordionGridProps> = ({
     setColSpan(`col-span-${12 / columnCount}`);
   }, [columnCount]);
 
-  const [selectedItem, setSelectedItem] = useState<typeof items[0] | null>(
-    null
-  );
+  const [selectedItem, setSelectedItem] = useState<AccordionItem | null>(null);
   const handleSelect = (index: number) => {
     const selected = items[index];
     if (selected?.id === selectedItem?.id) setSelectedItem(null);
     else setSelectedItem(selected);
   };
 
-  const shouldShowExpand = (selected: typeof items[0]) => {
+  const shouldShowExpand = (selected: AccordionItem) => {
     const foundIndex = items.findIndex(
-      (v: typeof items[0]) => v?.id === selected?.id
+      (v: AccordionItem) => v?.id === selected?.id
     );
     const nextMultiple =
       foundIndex + (columnCount - (foundIndex % columnCount));
+
+    if (nextMultiple > items?.length) return items?.length - 1;
     return nextMultiple - 1;
   };
 
@@ -252,12 +252,10 @@ const ExpandAccordionGrid: React.FC<ExpandAccordionGridProps> = ({
                 />
                 {selectedItem?.id === id && <SelectedBadge />}
               </motion.div>
-              {/* {selectedItem && shouldShowExpand(selectedItem) === i && ( */}
               <Expand
                 isOpen={selectedItem && shouldShowExpand(selectedItem) === i}
                 item={selectedItem || ({} as AccordionItem)}
               />
-              {/* )} */}
             </React.Fragment>
           );
         })}
