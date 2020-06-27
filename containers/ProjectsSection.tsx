@@ -22,7 +22,7 @@ const ProjectsSection: React.FC<Props> = ({ title, subtitle, repos }) => {
                 <div
                   key={repo.name}
                   className="col-span-12 sm:col-span-6 lg:col-span-4"
-                  data-aos="fade-up"
+                  data-aos="fade"
                   data-aos-offset="50"
                   data-aos-easing="ease-out"
                   data-aos-delay={(i + 1) * 150}
