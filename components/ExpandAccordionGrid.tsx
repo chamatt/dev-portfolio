@@ -42,7 +42,7 @@ const mock = [
     me:
       "The company wanted to revamp it's website, using cutting edge technologies. So we rebuilt it using React and Node.js. I was part of the front-end team, using React and Redux. One particular challenge we ran into while building this platform, was taking care of the SEO and keeping it as a SPA. We solved it by using prerendering, and managed to get a perfect social sharing SEO on a SPA.",
     tags: 'Front-end,React,Redux,Netlify,Pre-rendering',
-    website: 'https://staging.descola.co',
+    website: 'https://descola.org',
   },
   {
     id: 'tollbrothers',
@@ -89,7 +89,7 @@ const mock = [
     me:
       'I was responsible to build the entire PWA application with React, using Firebase as a backend, and Wirecard as payment processor.',
     tags: 'Fullstack,PWA,React,Redux,Firebase,Payment Integration,Wirecard',
-    website: 'https://www.ketchapp.com.br/site/',
+    website: 'https://www.ketchapp.com.br/',
   },
   {
     id: 'nextly',
