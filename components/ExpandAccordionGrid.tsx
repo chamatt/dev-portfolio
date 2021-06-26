@@ -28,8 +28,8 @@ const mock = [
     project: 'Palqee',
     about: 'Palqee is privacy management company that builds products to facilitate ethical and secure management of Personal Data universally for everyone.',
     me:
-      'I helped speed up the development of their front-end solution for data privacy compliancy.',
-    tags: 'Front-end,React,Next.js,Apollo GraphQL',
+      'I helped speed up the development of their front-end solution for data privacy compliancy, with a great focus on end-to-end testing to ensure quality.',
+    tags: 'Front-end,React,Next.js,Apollo GraphQL,Cypress,End2End',
     website: 'https://www.palqee.com/',
 
   },
