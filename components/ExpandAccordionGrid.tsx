@@ -22,6 +22,30 @@ interface ExpandAccordionGridProps {
 
 const mock = [
   {
+    id: 'palqee',
+    logo: '/img/palqee.svg',
+    cover: '/img/palqee-website.png',
+    project: 'Palqee',
+    about: 'Palqee is privacy management company that builds products to facilitate ethical and secure management of Personal Data universally for everyone.',
+    me:
+      'I helped speed up the development of their front-end solution for data privacy compliancy.',
+    tags: 'Front-end,React,Next.js,Apollo GraphQL',
+    website: 'https://www.palqee.com/',
+
+  },
+  {
+    id: 'jobpixel',
+    logo: '/img/jobpixel.svg',
+    cover: '/img/jobpixel-website.png',
+    project: 'JobPixel',
+    about: 'JobPixel is a company whose goal is to revolutionize hiring by creating a video-first proccess.',
+    me:
+      'I was part of the front-end development team and helped bring the plaform to reality',
+    tags: 'Front-end,React,API Integration,Video Recording,SPA',
+    website: 'https://www.jobpixel.com/',
+
+  },
+  {
     id: 'globalhawk',
     logo: '/img/globalhawk.svg',
     cover: '/img/globalhawk-website.jpg',
