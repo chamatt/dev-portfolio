@@ -11,7 +11,9 @@ import {
   DiAndroid,
   DiApple,
 } from "react-icons/di";
-import { GrGraphQl, GrGatsbyjs } from "react-icons/gr";
+import { SiJest } from "react-icons/si";
+import { GrGraphQl } from "react-icons/gr";
+import { GiTestTubes } from "react-icons/gi";
 import SectionTitle from "../components/SectionTitle";
 import Container from "../components/Container";
 import PersonalCard from "../components/PersonalCard";
@@ -50,17 +52,15 @@ const FrontEndStack = [
     name: "Next.js",
     custom: nextjsIcon,
   },
-  {
-    name: "Gatsby",
-    custom: GrGatsbyjs,
-  },
-  { name: "React Native", custom: DiAndroid },
-  { name: "ReactNative", custom: DiApple },
+  { name: "React Native", custom: DiReact },
+  { name: "Jest", custom: SiJest },
+  { name: "Cypress", custom: GiTestTubes },
   { name: "Redux", custom: DiReact },
   { name: "Apollo", custom: GrGraphQl },
   { name: "SaSS", custom: DiSass },
   { name: "HTML", custom: DiHtml5 },
   { name: "CSS", custom: DiCss3 },
+  { name: "SwiftUI", custom: DiApple },
 ];
 const BackEndStack = [
   { name: "Node.js", custom: DiNodejsSmall },
@@ -68,7 +68,6 @@ const BackEndStack = [
   { icon: "postgresql-plain", name: "Postgres" },
   { name: "MySQL", custom: DiMysql },
   { icon: "redis-plain", name: "Redis" },
-  { name: "ApolloServer", custom: GrGraphQl },
   { icon: "sequelize-plain", name: "Sequelize" },
 ];
 

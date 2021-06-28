@@ -15,7 +15,6 @@ type AccordionItem = {
   tags?: string;
   website?: string;
 };
-
 interface ExpandAccordionGridProps {
   items?: AccordionItem[];
 }
