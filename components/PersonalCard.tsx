@@ -1,6 +1,6 @@
 import React from "react";
 import attributes from "../content/landing/profile.yml";
-import { FaLocationArrow, FaBook } from "react-icons/fa";
+import { FaLocationArrow, FaBook, FaBookOpen } from "react-icons/fa";
 import { SocialIcons, SocialButton } from "./SocialIcons";
 import classNames from "classnames";
 import { Button } from "./Button";
@@ -66,6 +66,13 @@ const PersonalCard: React.FC<PersonalCardProps> = ({ showButton = true }) => {
         >
           <FaBook />
           <span className="pl-2 text-sm ">Resumé</span>
+        </a>
+        <a
+          className="cursor-pointer hover:text-indigo-500 flex items-center pb-4"
+          href="/pdf/detailed-experience.pdf"
+        >
+          <FaBookOpen />
+          <span className="pl-2 text-sm ">Detailed Experience</span>
         </a>
         {showButton && (
           <Link to="contact" smooth={true} offset={-50} duration={500}>
