@@ -155,7 +155,7 @@ const Expand: React.FC<ExpandProps> = ({
           <div className="z-10 col-span-12 w-full grid grid-cols-2 shadow-lg rounded-md">
             <div
               className="col-span-2 sm:col-span-1 bg-white relative overflow-hidden"
-              style={{ height: "100%" }}
+              style={{ height: "100%", minHeight: "200px" }}
             >
               <img
                 src={cover}
