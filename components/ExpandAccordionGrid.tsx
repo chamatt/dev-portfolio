@@ -23,7 +23,7 @@ const mock = [
   {
     id: "palqee",
     logo: "/img/palqee.svg",
-    cover: "/img/palqee-website.png",
+    cover: "/img/palqee-website.jpeg",
     project: "Palqee",
     about:
       "Palqee is privacy management company that builds products to facilitate ethical and secure management of Personal Data universally for everyone.",
@@ -34,7 +34,7 @@ const mock = [
   {
     id: "jobpixel",
     logo: "/img/jobpixel.svg",
-    cover: "/img/jobpixel-website.png",
+    cover: "/img/jobpixel-website.jpeg",
     project: "JobPixel",
     about:
       "JobPixel is a company whose goal is to revolutionize hiring by creating a video-first proccess.",
@@ -45,7 +45,7 @@ const mock = [
   {
     id: "eatzy",
     logo: "/img/eatzy.svg",
-    cover: "/img/eatzy-website.png",
+    cover: "/img/eatzy-website.jpeg",
     project: "Eatzy",
     about:
       "Eatzy is a startup company based in Connecticut whose goal is to help restaurant owners launch and operate their local restaurant delivery business quickly and profitably by offering solutions that reach all the parts of operating a restaurant, from managing orders, tracking delivery drivers, to the consumer portal. They just recently got a big round of investiments thanks to the solutions we built with them.",
