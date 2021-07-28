@@ -149,16 +149,25 @@ const Expand: React.FC<ExpandProps> = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+
           className="py-4 col-span-12"
         >
           <div className="z-10 col-span-12 w-full grid grid-cols-2 shadow-lg rounded-md">
             <div
-              className="col-span-2 sm:col-span-1 bg-white"
-              style={{ height: "100%" }}
+              className="col-span-2 sm:col-span-1 bg-white relative overflow-hidden"
+              style={{ height: "100%", minHeight: "200px" }}
             >
               <img
                 src={cover}
-                className="object-center w-full h-full object-cover"
+                className="object-center w-full h-full object-cover absolute"
+                style={{
+                  filter: "blur(50px)"
+                }}
+                alt={project}
+              />
+              <img
+                src={cover}
+                className="object-center w-full h-full object-contain absolute"
                 alt={project}
               />
             </div>
@@ -188,8 +197,9 @@ const Expand: React.FC<ExpandProps> = ({
             </div>
           </div>
         </motion.div>
-      )}
-    </AnimatePresence>
+      )
+      }
+    </AnimatePresence >
   );
 };
 
