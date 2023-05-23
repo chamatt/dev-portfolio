@@ -21,6 +21,27 @@ interface ExpandAccordionGridProps {
 
 const mock = [
   {
+    id: "oyster",
+    logo: "/img/oyster.svg",
+    cover: "/img/oyster-website.jpg",
+    project: "Oyster",
+    about:
+      "Oyster is a company that helps companies hire, onboard, manage and pay remote employees and contractors anywhere in the world.",
+    me: "I am responsible for the hiring experience on the platform, helping custumers hire compliantly and efficiently. I'm also responsible for the onboarding experience of the team members, making sure they have a great experience when joining the platform.",
+    tags: "React,GraphQL,TypeScript,Jest,Capybara,SPA",
+    website: "https://www.oysterhr.com/",
+  },
+  {
+    id: "fitgmr",
+    logo: "/img/fitgmr.svg",
+    cover: "/img/fitgmr-website.jpg",
+    project: "FitGMR",
+    about: "FitGMR is empowering players to reach their highest potential.",
+    me: "I was responsible for building their mobile application using Ionic and React.",
+    tags: "Ionic,React,Mobile,Cordova",
+    website: "https://fitgmr.gg/",
+  },
+  {
     id: "palqee",
     logo: "/img/palqee.svg",
     cover: "/img/palqee-website.jpeg",
@@ -149,7 +170,6 @@ const Expand: React.FC<ExpandProps> = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-
           className="py-4 col-span-12"
         >
           <div className="z-10 col-span-12 w-full grid grid-cols-2 shadow-lg rounded-md">
@@ -161,7 +181,7 @@ const Expand: React.FC<ExpandProps> = ({
                 src={cover}
                 className="object-center w-full h-full object-cover absolute"
                 style={{
-                  filter: "blur(50px)"
+                  filter: "blur(50px)",
                 }}
                 alt={project}
               />
@@ -197,9 +217,8 @@ const Expand: React.FC<ExpandProps> = ({
             </div>
           </div>
         </motion.div>
-      )
-      }
-    </AnimatePresence >
+      )}
+    </AnimatePresence>
   );
 };
 
