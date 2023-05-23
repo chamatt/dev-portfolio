@@ -21,6 +21,16 @@ interface ExpandAccordionGridProps {
 
 const mock = [
   {
+    id: "fitgmr",
+    logo: "/img/fitgmr.svg",
+    cover: "/img/fitgmr-website.jpg",
+    project: "FitGMR",
+    about: "FitGMR is empowering players to reach their highest potential.",
+    me: "I was responsible for building their mobile application using Ionic and React.",
+    tags: "Ionic,React,Mobile,Cordova",
+    website: "https://fitgmr.gg/",
+  },
+  {
     id: "palqee",
     logo: "/img/palqee.svg",
     cover: "/img/palqee-website.jpeg",
@@ -149,7 +159,6 @@ const Expand: React.FC<ExpandProps> = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-
           className="py-4 col-span-12"
         >
           <div className="z-10 col-span-12 w-full grid grid-cols-2 shadow-lg rounded-md">
@@ -161,7 +170,7 @@ const Expand: React.FC<ExpandProps> = ({
                 src={cover}
                 className="object-center w-full h-full object-cover absolute"
                 style={{
-                  filter: "blur(50px)"
+                  filter: "blur(50px)",
                 }}
                 alt={project}
               />
@@ -197,9 +206,8 @@ const Expand: React.FC<ExpandProps> = ({
             </div>
           </div>
         </motion.div>
-      )
-      }
-    </AnimatePresence >
+      )}
+    </AnimatePresence>
   );
 };
 
