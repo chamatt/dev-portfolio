@@ -21,6 +21,17 @@ interface ExpandAccordionGridProps {
 
 const mock = [
   {
+    id: "oyster",
+    logo: "/img/oyster.svg",
+    cover: "/img/oyster-website.jpg",
+    project: "Oyster",
+    about:
+      "Oyster is a company that helps companies hire, onboard, manage and pay remote employees and contractors anywhere in the world.",
+    me: "I am responsible for the hiring experience on the platform, helping custumers hire compliantly and efficiently. I'm also responsible for the onboarding experience of the team members, making sure they have a great experience when joining the platform.",
+    tags: "React,GraphQL,TypeScript,Jest,Capybara,SPA",
+    website: "https://www.oysterhr.com/",
+  },
+  {
     id: "fitgmr",
     logo: "/img/fitgmr.svg",
     cover: "/img/fitgmr-website.jpg",
